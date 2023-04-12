@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="vieira.ester.calculadora.view.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_principalFragment"
+            app:destination="@id/principalFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_historicoFragment"
+            app:destination="@id/historicoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/principalFragment"
+        android:name="vieira.ester.calculadora.view.PrincipalFragment"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" />
+    <fragment
+        android:id="@+id/historicoFragment"
+        android:name="vieira.ester.calculadora.view.HistoricoFragment"
+        android:label="fragment_historico"
+        tools:layout="@layout/fragment_historico" />
+</navigation>
